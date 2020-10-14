@@ -8,3 +8,5 @@ import { Table } from '@/components/table/Table';
 const excel = new Excel('#app', {
     components: [Header, Toolbar, Formula, Table]
 });
+// next lesson: https://vladilen.ru/pl/teach/control/lesson/view?id=161250588
+excel.render();
