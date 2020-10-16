@@ -2,34 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="added gitignore">
+      <change afterPath="$PROJECT_DIR$/src/core/DOM.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/._package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/._package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/._requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/._src" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/._webpack.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/._assets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/._favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/._index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/._index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/._scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/assets/._dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/assets/._excel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/scss/.__mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/scss/.__variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/scss/._dashboard.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/scss/._formula.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/scss/._header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/scss/._index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/scss/._table.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__MACOSX/src/scss/._toolbar.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/excel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/excel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/excel/Excel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/excel/Excel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/formula/Formula.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formula/Formula.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/toolbar/Toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toolbar/Toolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/DOMListener.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOMListener.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ExcelComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ExcelComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
@@ -43,6 +27,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1iV9m1o0Rv9Hbp5tWDo9oI36u5K" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -53,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../job-search-2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -102,6 +87,7 @@
       <updated>1601982047980</updated>
       <workItem from="1601982049027" duration="5101000" />
       <workItem from="1602047334704" duration="809000" />
+      <workItem from="1602846133829" duration="6769000" />
     </task>
     <servers />
   </component>
@@ -121,29 +107,33 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="776" y="370" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1173@67.27.1853.1173" timestamp="1602047542367" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1602696090332">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1807" height="328" key="GridCell.Tab.0.bottom" timestamp="1602846672373">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1602696090332" />
-    <state width="1807" height="328" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601990740205" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1602696090332">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1807" height="328" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1602846672373" />
+    <state width="1807" height="328" key="GridCell.Tab.0.center" timestamp="1602846672371">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1602696090332" />
-    <state width="1807" height="328" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601990740204" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1602696090332">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1807" height="328" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1602846672371" />
+    <state width="1807" height="328" key="GridCell.Tab.0.left" timestamp="1602846672371">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1602696090332" />
-    <state width="1807" height="328" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601990740204" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1602696090332">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1807" height="328" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1602846672371" />
+    <state width="1807" height="328" key="GridCell.Tab.0.right" timestamp="1602846672372">
+      <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1602696090332" />
-    <state width="1807" height="328" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601990740204" />
+    <state width="1807" height="328" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1602846672372" />
     <state x="482" y="247" key="SettingsEditor" timestamp="1601982724788">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="482" y="247" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1601982724788" />
+    <state x="774" y="527" width="428" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602846139357">
+      <screen x="67" y="27" width="1853" height="1173" />
+    </state>
+    <state x="774" y="527" width="428" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1173@67.27.1853.1173" timestamp="1602846139357" />
   </component>
 </project>
