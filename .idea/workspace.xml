@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="added gitignore">
-      <change afterPath="$PROJECT_DIR$/src/core/utils.js" afterDir="false" />
+    <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/table/table.template.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/excel/Excel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/excel/Excel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/formula/Formula.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formula/Formula.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/toolbar/Toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toolbar/Toolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/DOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/DOMListener.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOMListener.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ExcelComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ExcelComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +26,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../job-search-2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,7 +75,26 @@
       <updated>1601982047980</updated>
       <workItem from="1601982049027" duration="5101000" />
       <workItem from="1602047334704" duration="809000" />
+      <workItem from="1603121032807" duration="210000" />
+      <workItem from="1604488745597" duration="4476000" />
+      <workItem from="1604831096899" duration="3601000" />
+      <workItem from="1604929923646" duration="4708000" />
     </task>
+    <task id="LOCAL-00001" summary="added init/remove event listeners">
+      <created>1603031254442</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603031254442</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added new gitignore folder">
+      <created>1603031278124</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603031278124</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -88,41 +102,48 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="added gitignore" />
+    <MESSAGE value="added init/remove event listeners" />
+    <MESSAGE value="added new gitignore folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new gitignore folder" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="905" y="287" key="CommitChangelistDialog2" timestamp="1602695571619">
+    <state x="905" y="287" key="CommitChangelistDialog2" timestamp="1603031277700">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="905" y="287" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1602695571619" />
-    <state x="776" y="370" width="424" height="484" key="FileChooserDialogImpl" timestamp="1602047542367">
-      <screen x="67" y="27" width="1853" height="1173" />
+    <state x="905" y="287" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1603031277700" />
+    <state x="980" y="409" width="424" height="484" key="FileChooserDialogImpl" timestamp="1603121237974">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="980" y="409" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1603121237974" />
     <state x="776" y="370" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1173@67.27.1853.1173" timestamp="1602047542367" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1603026645110">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1604937765790">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603026645110" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1604937765790" />
     <state width="1807" height="328" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601990740205" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1603026645110">
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1604937765790">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603026645110" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1604937765790" />
     <state width="1807" height="328" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601990740204" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1603026645110">
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1604937765790">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603026645110" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1604937765790" />
     <state width="1807" height="328" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601990740204" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1603026645110">
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1604937765790">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603026645110" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1604937765790" />
     <state width="1807" height="328" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601990740204" />
     <state x="482" y="247" key="SettingsEditor" timestamp="1601982724788">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="482" y="247" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1601982724788" />
+    <state x="872" y="420" key="Vcs.Push.Dialog.v2" timestamp="1603031278990">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="420" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1603031278990" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1603027021433">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
