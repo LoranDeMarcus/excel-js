@@ -10,15 +10,24 @@ function toCell(value = '') {
 
 function toColumn(col) {
     return `
-    <div class="column">${col}</div>
+    <div class="column">
+        ${col}
+        <div class="col-resize"></div>
+    </div>
     `
 }
 
 function createRow(counter, content) {
+    const resize = counter ? `<div class="row-resize"></div>` : '';
     return `
     <div class="row">
-        <div class="row-info">${counter}</div>
-        <div class="row-data">${content}</div>
+        <div class="row-info">
+            ${counter ? counter : ''}
+            ${resize}
+        </div>
+        <div class="row-data">
+            ${content}
+        </div>
     </div>
     `
 }

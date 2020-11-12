@@ -27,3 +27,15 @@
     margin: 0;
     padding: 0;
 }
+
+%resize {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #3C74FF;
+    opacity: 0;
+
+    &:hover {
+        opacity: 1;
+    }
+}

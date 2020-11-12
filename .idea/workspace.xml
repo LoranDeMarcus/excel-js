@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/table.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/table.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +18,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iV9m1o0Rv9Hbp5tWDo9oI36u5K" />
@@ -102,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604938708071</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merge branch 'framework-start'&#10;&#10;# Conflicts:&#10;#&#9;.gitignore">
+      <created>1605195551693</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605195551693</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,46 +129,103 @@
     <MESSAGE value="added init/remove event listeners" />
     <MESSAGE value="added new gitignore folder" />
     <MESSAGE value="added row and cols" />
-    <option name="LAST_COMMIT_MESSAGE" value="added row and cols" />
+    <MESSAGE value="Merge branch 'framework-start'&#10;&#10;# Conflicts:&#10;#&#9;.gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'framework-start'&#10;&#10;# Conflicts:&#10;#&#9;.gitignore" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="905" y="287" key="CommitChangelistDialog2" timestamp="1604938707307">
+    <state x="905" y="287" key="CommitChangelistDialog2" timestamp="1605195551361">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="905" y="287" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1604938707307" />
+    <state x="905" y="287" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1605195551361" />
     <state x="980" y="409" width="424" height="484" key="FileChooserDialogImpl" timestamp="1603121237974">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="980" y="409" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1603121237974" />
     <state x="776" y="370" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1173@67.27.1853.1173" timestamp="1602047542367" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1605192302971">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1605195825935">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1605192302971" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1605195825935" />
     <state width="1807" height="328" key="GridCell.Tab.0.bottom/67.27.1853.1173@67.27.1853.1173" timestamp="1601990740205" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1605192302971">
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1605195825935">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1605192302971" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1605195825935" />
     <state width="1807" height="328" key="GridCell.Tab.0.center/67.27.1853.1173@67.27.1853.1173" timestamp="1601990740204" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1605192302971">
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1605195825935">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1605192302971" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1605195825935" />
     <state width="1807" height="328" key="GridCell.Tab.0.left/67.27.1853.1173@67.27.1853.1173" timestamp="1601990740204" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1605192302971">
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1605195825935">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1605192302971" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1605195825935" />
     <state width="1807" height="328" key="GridCell.Tab.0.right/67.27.1853.1173@67.27.1853.1173" timestamp="1601990740204" />
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1605195822527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1605195822527" />
+    <state width="2517" height="492" key="GridCell.Tab.1.center" timestamp="1605195822527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1605195822527" />
+    <state width="2517" height="492" key="GridCell.Tab.1.left" timestamp="1605195822527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1605195822527" />
+    <state width="2517" height="492" key="GridCell.Tab.1.right" timestamp="1605195822527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1605195822527" />
+    <state width="2517" height="492" key="GridCell.Tab.2.bottom" timestamp="1605195822527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1605195822527" />
+    <state width="2517" height="492" key="GridCell.Tab.2.center" timestamp="1605195822527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1605195822527" />
+    <state width="2517" height="492" key="GridCell.Tab.2.left" timestamp="1605195822527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1605195822527" />
+    <state width="2517" height="492" key="GridCell.Tab.2.right" timestamp="1605195822527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1605195822527" />
+    <state width="2517" height="492" key="GridCell.Tab.3.bottom" timestamp="1605195822527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.3.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1605195822527" />
+    <state width="2517" height="492" key="GridCell.Tab.3.center" timestamp="1605195822527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.3.center/0.0.2560.1400@0.0.2560.1400" timestamp="1605195822527" />
+    <state width="2517" height="492" key="GridCell.Tab.3.left" timestamp="1605195822527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.3.left/0.0.2560.1400@0.0.2560.1400" timestamp="1605195822527" />
+    <state width="2517" height="492" key="GridCell.Tab.3.right" timestamp="1605195822527">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1605195822527" />
+    <state x="248" y="122" key="MergeDialog" timestamp="1605195527391">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="248" y="122" key="MergeDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1605195527391" />
+    <state x="918" y="461" key="MultipleFileMergeDialog" timestamp="1605195527394">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="918" y="461" key="MultipleFileMergeDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1605195527394" />
     <state x="482" y="247" key="SettingsEditor" timestamp="1601982724788">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="482" y="247" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1601982724788" />
-    <state x="872" y="420" key="Vcs.Push.Dialog.v2" timestamp="1604938709259">
+    <state x="872" y="420" key="Vcs.Push.Dialog.v2" timestamp="1605195553048">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="420" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1604938709259" />
+    <state x="872" y="420" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1605195553048" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1603027021433">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
