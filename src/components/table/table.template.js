@@ -36,7 +36,7 @@ function toChar(_, i) {
     return String.fromCharCode(CODES.A + i);
 }
 
-export function createTalbe(rowsCount = 20) {
+export function createTable(rowsCount = 20) {
     const colsCount = CODES.Z - CODES.A + 1;
     const rows = [];
 
