@@ -1,3 +1,4 @@
+import { $ } from '@core/DOM';
 import { ExcelComponent } from '@core/ExcelComponent';
 import { createTable } from '@/components/table/table.template';
 
@@ -8,8 +9,6 @@ export class Table extends ExcelComponent {
         super($root, {
             listeners: ['click', 'mousedown', 'mousemove', 'mouseup']
         });
-        this._minColWidth = 30;
-        this._minRowHeight = 24;
     }
 
     toHTML() {
@@ -21,22 +20,24 @@ export class Table extends ExcelComponent {
     }
 
     onMousedown(e) {
-        if (e.target.dataset.resize) {
-            this.col = e.target.parentNode;
-            this.currentWidth = this.col.offsetWidth;
-            this.col_offset = e.pageX;
+        const $resizer = $(e.target);
+        const $parent = $resizer.closest('[data-type="resizable"]');
+        const coords = $parent.getCord();
+
+        document.onmousemove = ev => {
+            const delta = ev.pageX - coords.right;
+            const value = coords.width + delta;
+            $parent.$el.style.width = value + 'px';
+        }
+
+        document.onmouseup = () => {
+            document.onmousemove = null;
         }
     }
 
     onMousemove(e) {
-        if (this.col) {
-            this.calcWith = this.currentWidth + e.pageX - this.col_offset;
-            let newWidth = (this.calcWith < this._minColWidth ? this._minColWidth : this.calcWith) + 'px';
-            this.col.style.width = newWidth;
-        }
     }
 
-    onMouseup() {
-        this.col = null;
+    onMouseup(e) {
     }
 }
