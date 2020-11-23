@@ -22,23 +22,21 @@ export class Table extends ExcelComponent {
 
     onMousedown(e) {
         if (e.target.dataset.resize) {
-            const col = e.target.parentNode;
-            const currentWidth = col.offsetWidth;
-            const mousePositionX = this.onMousemove.mouseX;
-            const calcWidth = currentWidth + mousePositionX;
-            const newWidth = (calcWidth < this._minColWidth ? this._minColWidth : calcWidth) + 'px';
-            col.style.width = newWidth;
+            this.col = e.target.parentNode;
+            this.currentWidth = this.col.offsetWidth;
+            this.col_offset = e.pageX;
         }
     }
 
     onMousemove(e) {
-        return {
-            mouseX: e.movementX,
-            mouseY: e.movementY
-        };
+        if (this.col) {
+            this.calcWith = this.currentWidth + e.pageX - this.col_offset;
+            let newWidth = (this.calcWith < this._minColWidth ? this._minColWidth : this.calcWith) + 'px';
+            this.col.style.width = newWidth;
+        }
     }
 
     onMouseup() {
-
+        this.col = null;
     }
 }
