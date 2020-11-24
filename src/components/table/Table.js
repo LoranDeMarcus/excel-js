@@ -16,31 +16,42 @@ export class Table extends ExcelComponent {
     }
 
     onMousedown(e) {
-        const $resizer = $(e.target);
-        const $parent = $resizer.closest('[data-type="resizable"]');
-        const counter = $parent.data.num;
-        const cellsList = this.$root.findAll(`[data-num="${counter}"]`);
-        const coords = $parent.getCord();
+        if (e.target.dataset.resize) {
+            const $resizer = $(e.target);
+            const $parent = $resizer.closest('[data-type="resizable"]');
+            const counter = $parent.data.num;
+            const cellsList = this.$root.findAll(`[data-num="${counter}"]`);
+            const coords = $parent.getCord();
+            const type = $resizer.data.resize;
 
-        document.onmousemove = ev => {
-            const delta = ev.pageX - coords.right;
-            const value = coords.width + delta;
-            $resizer.$el.style.opacity = '1';
+            document.onmousemove = ev => {
+                if (type  === 'col') {
+                    const delta = ev.pageX - coords.right;
+                    const value = coords.width + delta;
+                    $resizer.css({opacity: '1'});
+                    $parent.css({width: `${value}px`});
 
-            cellsList.forEach(elem => {
-                elem.classList.add('resizing');
-                elem.style.width = `${value}px`;
-            });
-        }
+                    cellsList.forEach(elem => {
+                        elem.classList.add('resizing');
+                        $(elem).css({width: `${value}px`});
+                    });
+                } else {
+                    const delta = ev.pageY - coords.bottom;
+                    const value = coords.height + delta;
+                    $resizer.css({opacity: '1'});
+                    $parent.css({height: `${value}px`})
+                }
+            }
 
-        document.onmouseup = () => {
-            $resizer.$el.style.opacity = '0';
+            document.onmouseup = () => {
+                $resizer.css({opacity: '0'});
 
-            cellsList.forEach(elem => {
-                elem.classList.remove('resizing');
-            });
+                cellsList.forEach(elem => {
+                    elem.classList.remove('resizing');
+                });
 
-            document.onmousemove = null;
+                document.onmousemove = null;
+            }
         }
     }
 

@@ -51,6 +51,14 @@ class DOM {
         return this.$el.querySelectorAll(selector);
     }
 
+    css(styles = {}) {
+        Object
+            .keys(styles)
+            .forEach(key => {
+            this.$el.style[key] = styles[key];
+        });
+    }
+
     clear() {
         this.html('');
         return this;

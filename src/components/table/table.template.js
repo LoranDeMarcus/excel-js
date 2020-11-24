@@ -20,7 +20,7 @@ function toColumn(col, counter) {
 function createRow(counter, content) {
     const resize = counter ? `<div class="row-resize" data-resize="row"></div>` : '';
     return `
-    <div class="row">
+    <div class="row" data-type="resizable">
         <div class="row-info">
             ${counter ? counter : ''}
             ${resize}
