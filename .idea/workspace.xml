@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/table/table.helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/table/table.resize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/table.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,7 @@
       <workItem from="1605541400596" duration="28000" />
       <workItem from="1605785493358" duration="5191000" />
       <workItem from="1606134238828" duration="4638000" />
-      <workItem from="1606200781875" duration="14633000" />
+      <workItem from="1606200781875" duration="15182000" />
     </task>
     <task id="LOCAL-00001" summary="added init/remove event listeners">
       <created>1603031254442</created>
@@ -169,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606216730231</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactored resizing">
+      <created>1606218211852</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1606218211852</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,14 +195,15 @@
     <MESSAGE value="added resize all column and vertical line" />
     <MESSAGE value="refactored optimization" />
     <MESSAGE value="created css method" />
-    <option name="LAST_COMMIT_MESSAGE" value="created css method" />
+    <MESSAGE value="refactored resizing" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored resizing" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="722" y="267" width="860" height="863" key="CommitChangelistDialog2" timestamp="1606216730196">
+    <state x="504" y="184" width="1044" height="940" key="CommitChangelistDialog2" timestamp="1606218211814">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="905" y="287" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1605197516229" />
-    <state x="722" y="267" width="860" height="863" key="CommitChangelistDialog2/67.27.1853.1173@67.27.1853.1173" timestamp="1606216730196" />
+    <state x="504" y="184" width="1044" height="940" key="CommitChangelistDialog2/67.27.1853.1173@67.27.1853.1173" timestamp="1606218211814" />
     <state x="167" y="125" width="1653" height="975" key="DiffContextDialog" timestamp="1606216712996">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
@@ -285,15 +293,15 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="482" y="247" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1601982724788" />
-    <state x="698" y="379" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1606216731216">
+    <state x="698" y="379" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1606218212762">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="872" y="420" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1605197517754" />
-    <state x="698" y="379" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1606216731216" />
-    <state x="684" y="351" width="618" height="522" key="find.popup" timestamp="1606217079260">
+    <state x="698" y="379" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1606218212762" />
+    <state x="684" y="351" width="618" height="522" key="find.popup" timestamp="1606218591431">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
-    <state x="684" y="351" width="618" height="522" key="find.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1606217079260" />
+    <state x="684" y="351" width="618" height="522" key="find.popup/67.27.1853.1173@67.27.1853.1173" timestamp="1606218591431" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1603027021433">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

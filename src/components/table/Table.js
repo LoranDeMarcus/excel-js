@@ -1,6 +1,7 @@
-import { $ } from '@core/DOM';
 import { ExcelComponent } from '@core/ExcelComponent';
 import { createTable } from '@/components/table/table.template';
+import resizeHandler from '@/components/table/table.resize';
+import { shouldResize } from '@/components/table/table.helpers';
 
 export class Table extends ExcelComponent {
     static className = 'excel__table';
@@ -16,51 +17,8 @@ export class Table extends ExcelComponent {
     }
 
     onMousedown(e) {
-        if (e.target.dataset.resize) {
-            const $resizer = $(e.target);
-            const $parent = $resizer.closest('[data-type="resizable"]');
-            const counter = $parent.data.num;
-            const coords = $parent.getCord();
-            const type = $resizer.data.resize;
-            const sideProp = type === 'col' ? 'bottom' : 'right';
-            let value;
-            $resizer.css({
-                opacity: 1,
-                [sideProp]: '-2000px'
-            });
-
-            document.onmousemove = ev => {
-                if (type  === 'col') {
-                    const delta = ev.pageX - coords.right;
-                    value = coords.width + delta;
-                    $resizer.css({right: `${-delta}px`});
-                } else {
-                    const delta = ev.pageY - coords.bottom;
-                    value = coords.height + delta;
-
-                    $resizer.css({bottom: `${-delta}px`});
-                }
-            }
-
-            document.onmouseup = () => {
-                $resizer.css({
-                    opacity: 0,
-                    bottom: 0,
-                    right: 0
-                });
-
-                if (type  === 'col') {
-                    this.$root.findAll(`[data-num="${counter}"]`)
-                        .forEach(elem => {
-                            $(elem).css({width: `${value}px`});
-                        });
-                } else {
-                    $parent.css({height: `${value}px`})
-                }
-
-                document.onmousemove = null;
-                document.onmouseup = null;
-            }
+        if (shouldResize(e)) {
+            resizeHandler(e, this.$root);
         }
     }
 }
