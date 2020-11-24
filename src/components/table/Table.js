@@ -7,7 +7,7 @@ export class Table extends ExcelComponent {
 
     constructor($root) {
         super($root, {
-            listeners: ['click', 'mousedown', 'mousemove', 'mouseup']
+            listeners: ['mousedown', 'mousemove', 'mouseup']
         });
     }
 
@@ -15,22 +15,31 @@ export class Table extends ExcelComponent {
         return createTable();
     }
 
-    onClick() {
-
-    }
-
     onMousedown(e) {
         const $resizer = $(e.target);
         const $parent = $resizer.closest('[data-type="resizable"]');
+        const counter = $parent.$el.getAttribute('data-num');
+        const elemList = document.querySelectorAll(`[data-num="${counter}"]`);
         const coords = $parent.getCord();
 
         document.onmousemove = ev => {
             const delta = ev.pageX - coords.right;
             const value = coords.width + delta;
-            $parent.$el.style.width = value + 'px';
+            $resizer.$el.style.opacity = '1';
+
+            elemList.forEach(elem => {
+                elem.classList.add('resizing');
+                elem.style.width = `${value}px`;
+            });
         }
 
         document.onmouseup = () => {
+            $resizer.$el.style.opacity = '0';
+
+            elemList.forEach(elem => {
+                elem.classList.remove('resizing');
+            });
+
             document.onmousemove = null;
         }
     }

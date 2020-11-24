@@ -2,15 +2,15 @@ const CODES = {
     A: 65,
     Z: 90
 }
-function toCell(value = '') {
+function toCell(value = '', counter) {
     return `
-    <div class="cell" contenteditable>${value}</div>
+    <div class="cell" contenteditable data-num="${counter}">${value}</div>
     `
 }
 
-function toColumn(col) {
+function toColumn(col, counter) {
     return `
-    <div class="column" data-type="resizable">
+    <div class="column" data-type="resizable" data-num="${counter}">
         ${col}
         <div class="col-resize" data-resize="col"></div>
     </div>
