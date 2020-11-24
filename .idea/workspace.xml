@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table/table.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.template.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/table.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/DOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOM.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +89,7 @@
       <workItem from="1605541400596" duration="28000" />
       <workItem from="1605785493358" duration="5191000" />
       <workItem from="1606134238828" duration="4638000" />
-      <workItem from="1606200781875" duration="3370000" />
+      <workItem from="1606200781875" duration="5555000" />
     </task>
     <task id="LOCAL-00001" summary="added init/remove event listeners">
       <created>1603031254442</created>
@@ -149,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606138893731</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added resize all column and vertical line">
+      <created>1606204192545</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1606204192545</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,14 +170,15 @@
     <MESSAGE value="trying resize col width" />
     <MESSAGE value="added col resize" />
     <MESSAGE value="refactored col resize" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored col resize" />
+    <MESSAGE value="added resize all column and vertical line" />
+    <option name="LAST_COMMIT_MESSAGE" value="added resize all column and vertical line" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="722" y="267" width="860" height="863" key="CommitChangelistDialog2" timestamp="1606138893681">
+    <state x="722" y="267" width="860" height="863" key="CommitChangelistDialog2" timestamp="1606204192467">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="905" y="287" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1605197516229" />
-    <state x="722" y="267" width="860" height="863" key="CommitChangelistDialog2/67.27.1853.1173@67.27.1853.1173" timestamp="1606138893681" />
+    <state x="722" y="267" width="860" height="863" key="CommitChangelistDialog2/67.27.1853.1173@67.27.1853.1173" timestamp="1606204192467" />
     <state x="980" y="409" width="424" height="484" key="FileChooserDialogImpl" timestamp="1605541426285">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -258,11 +264,11 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="482" y="247" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1601982724788" />
-    <state x="698" y="379" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1606138894643">
+    <state x="698" y="379" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1606204193595">
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="872" y="420" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1605197517754" />
-    <state x="698" y="379" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1606138894643" />
+    <state x="698" y="379" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1173@67.27.1853.1173" timestamp="1606204193595" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1603027021433">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

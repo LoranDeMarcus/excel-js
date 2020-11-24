@@ -18,8 +18,8 @@ export class Table extends ExcelComponent {
     onMousedown(e) {
         const $resizer = $(e.target);
         const $parent = $resizer.closest('[data-type="resizable"]');
-        const counter = $parent.$el.getAttribute('data-num');
-        const elemList = document.querySelectorAll(`[data-num="${counter}"]`);
+        const counter = $parent.data.num;
+        const cellsList = this.$root.findAll(`[data-num="${counter}"]`);
         const coords = $parent.getCord();
 
         document.onmousemove = ev => {
@@ -27,7 +27,7 @@ export class Table extends ExcelComponent {
             const value = coords.width + delta;
             $resizer.$el.style.opacity = '1';
 
-            elemList.forEach(elem => {
+            cellsList.forEach(elem => {
                 elem.classList.add('resizing');
                 elem.style.width = `${value}px`;
             });
@@ -36,7 +36,7 @@ export class Table extends ExcelComponent {
         document.onmouseup = () => {
             $resizer.$el.style.opacity = '0';
 
-            elemList.forEach(elem => {
+            cellsList.forEach(elem => {
                 elem.classList.remove('resizing');
             });
 

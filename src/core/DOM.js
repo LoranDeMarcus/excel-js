@@ -35,12 +35,20 @@ class DOM {
         return this.$el.getBoundingClientRect();
     }
 
+    get data() {
+        return this.$el.dataset;
+    }
+
     on(eventType, callback) {
         this.$el.addEventListener(eventType, callback);
     }
 
     off(eventType, callback) {
         this.$el.removeEventListener(eventType, callback);
+    }
+
+    findAll(selector) {
+        return this.$el.querySelectorAll(selector);
     }
 
     clear() {
