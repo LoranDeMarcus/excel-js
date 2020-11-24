@@ -2,23 +2,32 @@ const CODES = {
     A: 65,
     Z: 90
 }
-function toCell(value = '') {
+function toCell(value = '', counter) {
     return `
-    <div class="cell" contenteditable>${value}</div>
+    <div class="cell" contenteditable data-num="${counter}">${value}</div>
     `
 }
 
-function toColumn(col) {
+function toColumn(col, counter) {
     return `
-    <div class="column">${col}</div>
+    <div class="column" data-type="resizable" data-num="${counter}">
+        ${col}
+        <div class="col-resize" data-resize="col"></div>
+    </div>
     `
 }
 
 function createRow(counter, content) {
+    const resize = counter ? `<div class="row-resize" data-resize="row"></div>` : '';
     return `
-    <div class="row">
-        <div class="row-info">${counter}</div>
-        <div class="row-data">${content}</div>
+    <div class="row" data-type="resizable">
+        <div class="row-info">
+            ${counter ? counter : ''}
+            ${resize}
+        </div>
+        <div class="row-data">
+            ${content}
+        </div>
     </div>
     `
 }
@@ -27,7 +36,7 @@ function toChar(_, i) {
     return String.fromCharCode(CODES.A + i);
 }
 
-export function createTalbe(rowsCount = 20) {
+export function createTable(rowsCount = 20) {
     const colsCount = CODES.Z - CODES.A + 1;
     const rows = [];
 
