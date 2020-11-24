@@ -58,11 +58,6 @@
     white-space: nowrap;
     outline: none;
 
-    &.resizing {
-      border-right: 1px solid $primary-color;
-    }
-
-
     &.selected {
       border: none;
       outline: 2px solid $primary-color;

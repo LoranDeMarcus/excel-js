@@ -20,44 +20,47 @@ export class Table extends ExcelComponent {
             const $resizer = $(e.target);
             const $parent = $resizer.closest('[data-type="resizable"]');
             const counter = $parent.data.num;
-            const cellsList = this.$root.findAll(`[data-num="${counter}"]`);
             const coords = $parent.getCord();
             const type = $resizer.data.resize;
+            const sideProp = type === 'col' ? 'bottom' : 'right';
+            let value;
+            $resizer.css({
+                opacity: 1,
+                [sideProp]: '-2000px'
+            });
 
             document.onmousemove = ev => {
                 if (type  === 'col') {
                     const delta = ev.pageX - coords.right;
-                    const value = coords.width + delta;
-                    $resizer.css({opacity: '1'});
-                    $parent.css({width: `${value}px`});
-
-                    cellsList.forEach(elem => {
-                        elem.classList.add('resizing');
-                        $(elem).css({width: `${value}px`});
-                    });
+                    value = coords.width + delta;
+                    $resizer.css({right: `${-delta}px`});
                 } else {
                     const delta = ev.pageY - coords.bottom;
-                    const value = coords.height + delta;
-                    $resizer.css({opacity: '1'});
-                    $parent.css({height: `${value}px`})
+                    value = coords.height + delta;
+
+                    $resizer.css({bottom: `${-delta}px`});
                 }
             }
 
             document.onmouseup = () => {
-                $resizer.css({opacity: '0'});
-
-                cellsList.forEach(elem => {
-                    elem.classList.remove('resizing');
+                $resizer.css({
+                    opacity: 0,
+                    bottom: 0,
+                    right: 0
                 });
 
+                if (type  === 'col') {
+                    this.$root.findAll(`[data-num="${counter}"]`)
+                        .forEach(elem => {
+                            $(elem).css({width: `${value}px`});
+                        });
+                } else {
+                    $parent.css({height: `${value}px`})
+                }
+
                 document.onmousemove = null;
+                document.onmouseup = null;
             }
         }
-    }
-
-    onMousemove(e) {
-    }
-
-    onMouseup(e) {
     }
 }
