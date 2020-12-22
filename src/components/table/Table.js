@@ -2,7 +2,7 @@ import { $ } from '@core/DOM';
 import { ExcelComponent } from '@core/ExcelComponent';
 import { createTable } from '@/components/table/table.template';
 import resizeHandler from '@/components/table/table.resize';
-import { isCell, isMultiplySelection, matrix, shouldResize } from '@/components/table/table.helpers';
+import { isCell, isMultiplySelection, matrix, shouldResize, nextSelector } from '@/components/table/table.helpers';
 import { TableSelection } from '@/components/table/TableSelection';
 
 export class Table extends ExcelComponent {
@@ -10,7 +10,7 @@ export class Table extends ExcelComponent {
 
     constructor($root) {
         super($root, {
-            listeners: ['mousedown']
+            listeners: ['mousedown', 'keydown']
         });
     }
 
@@ -35,13 +35,33 @@ export class Table extends ExcelComponent {
         } else if (isCell(e)) {
             const $cell = $(e.target);
             if (isMultiplySelection(e)) {
-
                 const $cells = matrix($cell, this.selection.current)
                     .map(id => this.$root.find(`[data-id="${id}"`));
+
                 this.selection.selectGroup($cells);
             } else {
                 this.selection.select($cell);
             }
+        }
+    }
+
+    onKeydown(e) {
+        const keys = [
+            'Enter',
+            'Tab',
+            'ArrowLeft',
+            'ArrowUp',
+            'ArrowRight',
+            'ArrowDown'
+        ];
+
+        const { key } = e;
+
+        if (keys.includes(key) && !e.shiftKey) {
+            e.preventDefault();
+            const id = this.selection.current.id(true);
+            const $next = this.$root.find(nextSelector(key, id));
+            this.selection.select($next);
         }
     }
 }
