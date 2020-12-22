@@ -13,6 +13,14 @@ class DOM {
         return this.$el.outerHTML.trim();
     }
 
+    text(string) {
+        if (typeof string === 'string') {
+            this.$el.textContent = string.trim();
+            return this;
+        }
+        return this.$el.textContent.trim();
+    }
+
     append(node) {
         if (node instanceof DOM) {
             node = node.$el;
