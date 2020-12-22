@@ -2,7 +2,7 @@ import { $ } from '@core/DOM';
 import { ExcelComponent } from '@core/ExcelComponent';
 import { createTable } from '@/components/table/table.template';
 import resizeHandler from '@/components/table/table.resize';
-import { isCell, shouldResize } from '@/components/table/table.helpers';
+import { isCell, isMultiplySelection, matrix, shouldResize } from '@/components/table/table.helpers';
 import { TableSelection } from '@/components/table/TableSelection';
 
 export class Table extends ExcelComponent {
@@ -34,8 +34,14 @@ export class Table extends ExcelComponent {
             resizeHandler(e, this.$root);
         } else if (isCell(e)) {
             const $cell = $(e.target);
-            this.selection.select($cell);
-        }
+            if (isMultiplySelection(e)) {
 
+                const $cells = matrix($cell, this.selection.current)
+                    .map(id => this.$root.find(`[data-id="${id}"`));
+                this.selection.selectGroup($cells);
+            } else {
+                this.selection.select($cell);
+            }
+        }
     }
 }

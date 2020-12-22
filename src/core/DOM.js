@@ -47,6 +47,17 @@ class DOM {
         this.$el.removeEventListener(eventType, callback);
     }
 
+    id(parse) {
+        if (parse) {
+            const parsed = this.id().split(':');
+            return {
+                row: Number.parseInt(parsed[0]),
+                col: Number.parseInt(parsed[1])
+            }
+        }
+        return this.data.id;
+    }
+
     find(selector) {
         return $(this.$el.querySelector(selector));
     }
