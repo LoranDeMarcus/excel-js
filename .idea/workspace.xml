@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/formula/Formula.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formula/Formula.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/DOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/createStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +67,8 @@
       <list>
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -95,7 +96,7 @@
       <workItem from="1607429668849" duration="972000" />
       <workItem from="1608616875260" duration="15092000" />
       <workItem from="1608635999443" duration="6108000" />
-      <workItem from="1608704335595" duration="5039000" />
+      <workItem from="1608704335595" duration="10123000" />
     </task>
     <task id="LOCAL-00001" summary="added init/remove event listeners">
       <created>1603031254442</created>
@@ -223,7 +224,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608641280260</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="bound table cells and formula input">
+      <created>1608710082505</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1608710082505</updated>
+    </task>
+    <task id="LOCAL-00020" summary="added chain logic">
+      <created>1608710140214</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1608710140214</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +264,8 @@
     <MESSAGE value="created group selection" />
     <MESSAGE value="added arrow focus control" />
     <MESSAGE value="created emmiter" />
-    <option name="LAST_COMMIT_MESSAGE" value="created emmiter" />
+    <MESSAGE value="bound table cells and formula input" />
+    <MESSAGE value="added chain logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="added chain logic" />
   </component>
 </project>
