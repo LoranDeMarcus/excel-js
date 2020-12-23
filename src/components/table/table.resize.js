@@ -3,7 +3,7 @@ import { $ } from '@core/DOM';
 export default function resizeHandler(e, $root) {
     const $resizer = $(e.target);
     const $parent = $resizer.closest('[data-type="resizable"]');
-    const counter = $parent.data.num;
+    const counter = $parent.data.col;
     const coords = $parent.getCord();
     const type = $resizer.data.resize;
     const sideProp = type === 'col' ? 'bottom' : 'right';
