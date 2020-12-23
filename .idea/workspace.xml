@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/formula/Formula.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formula/Formula.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table/TableSelection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/TableSelection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table/table.helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/DOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOM.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +94,8 @@
       <workItem from="1606200781875" duration="15182000" />
       <workItem from="1607429668849" duration="972000" />
       <workItem from="1608616875260" duration="15092000" />
-      <workItem from="1608635999443" duration="2180000" />
+      <workItem from="1608635999443" duration="6108000" />
+      <workItem from="1608704335595" duration="5039000" />
     </task>
     <task id="LOCAL-00001" summary="added init/remove event listeners">
       <created>1603031254442</created>
@@ -209,7 +209,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608626181446</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added arrow focus control">
+      <created>1608638201496</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1608638201496</updated>
+    </task>
+    <task id="LOCAL-00018" summary="created emmiter">
+      <created>1608641280260</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1608641280260</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +247,8 @@
     <MESSAGE value="created new class" />
     <MESSAGE value="added cell selection" />
     <MESSAGE value="created group selection" />
-    <option name="LAST_COMMIT_MESSAGE" value="created group selection" />
+    <MESSAGE value="added arrow focus control" />
+    <MESSAGE value="created emmiter" />
+    <option name="LAST_COMMIT_MESSAGE" value="created emmiter" />
   </component>
 </project>
