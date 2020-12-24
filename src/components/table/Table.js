@@ -41,7 +41,7 @@ export class Table extends ExcelComponent {
 
     selectCell($cell) {
         this.selection.select($cell);
-        this.$dispatch('table:select', $cell);
+        this.$emit('table:select', $cell);
     }
 
     onMousedown(e) {
@@ -55,7 +55,7 @@ export class Table extends ExcelComponent {
 
                 this.selection.selectGroup($cells);
             } else {
-                this.selection.select($cell);
+                this.selectCell($cell);
             }
         }
     }
@@ -81,6 +81,6 @@ export class Table extends ExcelComponent {
     }
 
     onInput(e) {
-        this.$dispatch('table:input', $(e.target));
+        this.$emit('table:input', $(e.target));
     }
 }

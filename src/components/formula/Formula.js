@@ -36,14 +36,14 @@ export class Formula extends ExcelComponent {
     }
 
     onInput(e) {
-        this.$dispatch('formula:input', $(e.target).text());
+        this.$emit('formula:input', $(e.target).text());
     }
 
     onKeydown(e) {
         const keys = ['Enter', 'Tab'];
         if (keys.includes(e.key)) {
             e.preventDefault();
-            this.$dispatch('formula:focus');
+            this.$emit('formula:focus');
         }
 
     }
