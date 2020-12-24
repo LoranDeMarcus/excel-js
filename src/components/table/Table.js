@@ -60,7 +60,7 @@ export class Table extends ExcelComponent {
 
     onMousedown(e) {
         if (shouldResize(e)) {
-            this.resizeTable(e);
+            resizeHandler(e, this.$root);
         } else if (isCell(e)) {
             const $cell = $(e.target);
             if (isMultiplySelection(e)) {
@@ -69,7 +69,7 @@ export class Table extends ExcelComponent {
 
                 this.selection.selectGroup($cells);
             } else {
-                this.selectCell($cell);
+                this.selection.select($cell);
             }
         }
     }
@@ -95,6 +95,6 @@ export class Table extends ExcelComponent {
     }
 
     onInput(e) {
-        this.$emit('table:input', $(e.target));
+        this.$dispatch('table:input', $(e.target));
     }
 }
