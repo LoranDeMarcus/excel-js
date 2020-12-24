@@ -7,7 +7,13 @@ import { Formula } from '@/components/formula/Formula';
 import { Table } from '@/components/table/Table';
 import { rootReducer } from '@/redux/rootReducer';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, {
+    colState: {}
+});
+
+store.subscribe(state => {
+    console.log(state);
+});
 
 const excel = new Excel('#app', {
     components: [Header, Toolbar, Formula, Table],
