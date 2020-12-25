@@ -4,7 +4,6 @@ import { createTable } from '@/components/table/table.template';
 import resizeHandler from '@/components/table/table.resize';
 import { isCell, isMultiplySelection, matrix, shouldResize, nextSelector } from '@/components/table/table.helpers';
 import { TableSelection } from '@/components/table/TableSelection';
-import { TABLE_RESIZE } from '@/redux/types';
 import * as actions from '@/redux/actions';
 
 export class Table extends ExcelComponent {

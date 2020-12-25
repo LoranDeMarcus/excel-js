@@ -9,20 +9,15 @@
     "build": "cross-env NODE_ENV=production webpack --mode production"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vladilenm/excel-course.git"
+    "type": "git"
   },
   "keywords": [
     "js",
     "javascript",
     "excel"
   ],
-  "author": "Vladilen Minin <vladilen.minin@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vladilenm/excel-course/issues"
-  },
-  "homepage": "https://github.com/vladilenm/excel-course#readme",
+  "author": "",
+  "license": "",
   "private": true,
   "browserslist": "> 0.25%, not dead",
   "devDependencies": {
