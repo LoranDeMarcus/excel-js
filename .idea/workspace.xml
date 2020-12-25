@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/formula/Formula.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formula/Formula.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/table.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.template.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +99,7 @@
       <workItem from="1608616875260" duration="15092000" />
       <workItem from="1608635999443" duration="6108000" />
       <workItem from="1608704335595" duration="10123000" />
-      <workItem from="1608873738223" duration="5156000" />
+      <workItem from="1608873738223" duration="7391000" />
     </task>
     <task id="LOCAL-00001" summary="added init/remove event listeners">
       <created>1603031254442</created>
@@ -261,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608878058455</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added localstorage get/set">
+      <created>1608879787296</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1608879787296</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +304,7 @@
     <MESSAGE value="added chain logic" />
     <MESSAGE value="new iteration in finding bug" />
     <MESSAGE value="finally fixed dispatch" />
-    <option name="LAST_COMMIT_MESSAGE" value="finally fixed dispatch" />
+    <MESSAGE value="added localstorage get/set" />
+    <option name="LAST_COMMIT_MESSAGE" value="added localstorage get/set" />
   </component>
 </project>
