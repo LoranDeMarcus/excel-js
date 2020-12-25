@@ -1,24 +1,27 @@
+import { storage } from '@core/utils';
+
 const CODES = {
     A: 65,
     Z: 90
 }
 
-function toCell(row) {
+function toCell(row, state) {
     return function (_, col) {
         return `
             <div class="cell" 
             contenteditable 
             data-col="${col}"
             data-type="cell"
-            data-id="${row}:${col}">
+            data-id="${row}:${col}"
+            style="width: ${state[col]}px">
             </div>
         `
     }
 }
 
-function toColumn(col, counter) {
+function toColumn(col, counter, state) {
     return `
-    <div class="column" data-type="resizable" data-col="${counter}">
+    <div class="column" data-type="resizable" data-col="${counter}" style="width: ${state[counter]}px">
         ${col}
         <div class="col-resize" data-resize="col"></div>
     </div>
@@ -47,11 +50,14 @@ function toChar(_, i) {
 export function createTable(rowsCount = 20) {
     const colsCount = CODES.Z - CODES.A + 1;
     const rows = [];
+    const state = storage('excel-state');
 
     const cols = new Array(colsCount)
         .fill('')
         .map(toChar)
-        .map(toColumn)
+        .map((el, i) => {
+            return toColumn(el, i, state.colState)
+        })
         .join('');
 
     rows.push(createRow('', cols));
@@ -59,7 +65,7 @@ export function createTable(rowsCount = 20) {
     for (let row = 0; row < rowsCount; row++) {
         const cells = new Array(colsCount)
             .fill('')
-            .map(toCell(row))
+            .map(toCell(row, state.colState))
             .join('');
 
         rows.push(createRow(row + 1, cells));
