@@ -19,6 +19,6 @@ const excel = new Excel('#app', {
     store
 });
 
-// next lesson: https://vladilen.ru/pl/teach/control/lesson/view?id=161422300
+// next lesson: https://vladilen.ru/pl/teach/control/lesson/view?id=161422318
 
 excel.render();
