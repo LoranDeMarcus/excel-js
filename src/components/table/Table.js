@@ -46,13 +46,12 @@ export class Table extends ExcelComponent {
     selectCell($cell) {
         this.selection.select($cell);
         this.$emit('table:select', $cell);
-        this.$dispatch({ type: 'Test' });
     }
 
     async resizeTable(e) {
         try {
             const data = await resizeHandler(e, this.$root);
-            this.$dispatch({ type: 'TABLE_RESIZE' }, data);
+            this.$dispatch({ type: 'TABLE_RESIZE' , data });
         } catch (e) {
             console.warn('Resize error:', e.message);
         }
@@ -60,7 +59,7 @@ export class Table extends ExcelComponent {
 
     onMousedown(e) {
         if (shouldResize(e)) {
-            resizeHandler(e, this.$root);
+            this.resizeTable(e, this.$root);
         } else if (isCell(e)) {
             const $cell = $(e.target);
             if (isMultiplySelection(e)) {
