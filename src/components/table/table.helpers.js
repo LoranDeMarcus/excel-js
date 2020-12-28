@@ -1,15 +1,11 @@
 import { range } from '@core/utils';
 
-export function shouldResize(e) {
-    return e.target.dataset.resize;
+export function shouldResize(event) {
+    return event.target.dataset.resize;
 }
 
-export function isCell(e) {
-    return e.target.dataset.type = 'cell';
-}
-
-export function isMultiplySelection(e) {
-    return e.shiftKey;
+export function isCell(event) {
+    return event.target.dataset.type === 'cell';
 }
 
 export function matrix($target, $current) {
@@ -24,7 +20,10 @@ export function matrix($target, $current) {
     }, []);
 }
 
-export function nextSelector(key, { col, row }) {
+export function nextSelector(key, {
+    col,
+    row
+}) {
     const MIN_VALUE = 0;
     switch (key) {
         case 'Enter':
@@ -33,7 +32,7 @@ export function nextSelector(key, { col, row }) {
             break;
         case 'Tab':
         case 'ArrowRight':
-            col++
+            col++;
             break;
         case 'ArrowLeft':
             col = col - 1 < MIN_VALUE ? MIN_VALUE : col - 1;

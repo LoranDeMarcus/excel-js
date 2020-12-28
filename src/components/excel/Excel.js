@@ -14,13 +14,12 @@ export class Excel {
 
         const componentOptions = {
             emitter: this.emitter,
-            store: this.store
+            store: this.store,
         };
 
         this.components = this.components.map(Component => {
             const $el = $.create('div', Component.className);
             const component = new Component($el, componentOptions);
-
             $el.html(component.toHTML());
             $root.append($el);
             return component;

@@ -8,9 +8,15 @@ export class Formula extends ExcelComponent {
         super($root, {
             name: 'Formula',
             listeners: ['input', 'keydown'],
-            ...options
+            ...options,
         });
+    }
 
+    toHTML() {
+        return `
+      <div class="info">fx</div>
+      <div id="formula" class="input" contenteditable spellcheck="false"></div>
+    `;
     }
 
     init() {
@@ -23,32 +29,23 @@ export class Formula extends ExcelComponent {
         });
 
         this.$on('table:input', $cell => {
-            console.log(this.$formula);
             this.$formula.text($cell.text());
         });
 
-        // this.$subscribe(state => {
-        //     console.log('FormulaState', state);
-        // });
+        this.$subscribe(state => {
+            console.log('FormulaState', state);
+        });
     }
 
-    toHTML() {
-        return `
-            <div class="info">fx</div>
-            <div id="formula" class="input" contenteditable spellcheck="false"></div>
-        `
+    onInput(event) {
+        this.$emit('formula:input', $(event.target).text());
     }
 
-    onInput(e) {
-        this.$emit('formula:input', $(e.target).text());
-    }
-
-    onKeydown(e) {
+    onKeydown(event) {
         const keys = ['Enter', 'Tab'];
-        if (keys.includes(e.key)) {
-            e.preventDefault();
-            this.$emit('formula:focus');
+        if (keys.includes(event.key)) {
+            event.preventDefault();
+            this.$emit('formula:done');
         }
-
     }
 }

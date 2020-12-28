@@ -3,10 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/excel/Excel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/excel/Excel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/formula/Formula.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formula/Formula.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/table/TableSelection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/TableSelection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/table/table.resize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.resize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/table/table.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/toolbar/Toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toolbar/Toolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/DOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOM.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/DOMListener.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOMListener.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/Emitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Emitter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ExcelComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ExcelComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/createStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/createStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,14 +28,12 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="1iV9m1o0Rv9Hbp5tWDo9oI36u5K" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -36,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../job-search-2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,7 +52,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="npm.start">
@@ -102,7 +110,6 @@
       <workItem from="1608616875260" duration="15092000" />
       <workItem from="1608635999443" duration="6108000" />
       <workItem from="1608704335595" duration="10123000" />
-      <workItem from="1608873738223" duration="17361000" />
     </task>
     <task id="LOCAL-00001" summary="added init/remove event listeners">
       <created>1603031254442</created>
@@ -244,50 +251,13 @@
       <option name="project" value="LOCAL" />
       <updated>1608710140214</updated>
     </task>
-    <task id="LOCAL-00021" summary="new iteration in finding bug">
-      <created>1608814696099</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1608814696099</updated>
-    </task>
-    <task id="LOCAL-00022" summary="finally fixed dispatch">
-      <created>1608878058455</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1608878058455</updated>
-    </task>
-    <task id="LOCAL-00023" summary="added localstorage get/set">
-      <created>1608879787296</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1608879787296</updated>
-    </task>
-    <task id="LOCAL-00024" summary="refactored width saver and render">
-      <created>1608881791794</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1608881791794</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
@@ -312,10 +282,6 @@
     <MESSAGE value="created emmiter" />
     <MESSAGE value="bound table cells and formula input" />
     <MESSAGE value="added chain logic" />
-    <MESSAGE value="new iteration in finding bug" />
-    <MESSAGE value="finally fixed dispatch" />
-    <MESSAGE value="added localstorage get/set" />
-    <MESSAGE value="refactored width saver and render" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored width saver and render" />
+    <option name="LAST_COMMIT_MESSAGE" value="added chain logic" />
   </component>
 </project>
