@@ -6,9 +6,11 @@ import { Formula } from '@/components/formula/Formula';
 import { Table } from '@/components/table/Table';
 import { rootReducer } from '@/redux/rootReducer';
 import { storage } from '@core/utils';
+import { initialState } from './redux/initialState';
+
 import './scss/index.scss';
 
-const store = createStore(rootReducer, storage('excel-state'));
+const store = createStore(rootReducer, initialState);
 
 store.subscribe(state => {
     storage('excel-state', state);
@@ -19,6 +21,6 @@ const excel = new Excel('#app', {
     store
 });
 
-// next lesson: https://vladilen.ru/pl/teach/control/lesson/view?id=161422318
+// next lesson: https://vladilen.ru/pl/teach/control/lesson/view?id=161422327
 
 excel.render();
