@@ -1,6 +1,5 @@
-import { CHANGE_TEXT, TABLE_RESIZE } from './types';
+import { APPLY_STYLE, CHANGE_STYLES, CHANGE_TEXT, TABLE_RESIZE } from './types';
 
-// Action Creator
 export function tableResize(data) {
     return {
         type: TABLE_RESIZE,
@@ -11,6 +10,20 @@ export function tableResize(data) {
 export function changeText(data) {
     return {
         type: CHANGE_TEXT,
+        data
+    }
+}
+
+export function changeStyles(data) {
+    return {
+        type: CHANGE_STYLES,
+        data
+    }
+}
+
+export function applyStyle(data) {
+    return {
+        type: APPLY_STYLE,
         data
     }
 }

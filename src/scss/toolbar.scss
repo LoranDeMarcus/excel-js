@@ -15,4 +15,8 @@
   .button {
     @include button(green);
   }
+
+  .material-icons {
+    pointer-events: none;
+  }
 }

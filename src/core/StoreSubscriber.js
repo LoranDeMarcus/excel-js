@@ -1,3 +1,5 @@
+import { isEqual } from '@core/utils';
+
 export class StoreSubscriber {
     constructor(store) {
         this.store = store;
