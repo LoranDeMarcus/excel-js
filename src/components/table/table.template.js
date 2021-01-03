@@ -1,4 +1,5 @@
 import { toInlineStyles } from '@core/utils';
+import { defaultStyles } from '@/constants';
 
 const CODES = {
     A: 65,
@@ -20,23 +21,26 @@ function toCell(state, row) {
     return function (_, col) {
         const id = `${row}:${col}`;
         const width = getWidth(state.colState, col);
-        const data = state.dataState[id] || '';
-        const styles = toInlineStyles(state.stylesState[id]);
+        const data = state.dataState[id];
+        const styles = toInlineStyles({ ...defaultStyles, ...state.stylesState[id] });
         return `
       <div 
         class="cell" 
         contenteditable 
         data-col="${col}"
         data-type="cell"
-        data-id="${row}:${col}"
-        style="${styles}; width: ${width}">
-      ${data}
-    </div>
+        data-id="${id}"
+        style="${styles}; width: ${width}"
+      >${data || ''}</div>
     `;
     };
 }
 
-function toColumn({ col, index, width }) {
+function toColumn({
+                      col,
+                      index,
+                      width
+                  }) {
     return `
     <div 
       class="column" 
@@ -50,7 +54,7 @@ function toColumn({ col, index, width }) {
   `;
 }
 
-function createRow(index, content, state) {
+function createRow(index, content, state = {}) {
     const resize = index ? '<div class="row-resize" data-resize="row"></div>' : '';
     const height = getHeight(state, index);
     return `
@@ -94,7 +98,7 @@ export function createTable(rowsCount = 15, state = {}) {
         .map(toColumn)
         .join('');
 
-    rows.push(createRow(null, cols, {}));
+    rows.push(createRow(null, cols));
 
     for (let row = 0; row < rowsCount; row++) {
         const cells = new Array(colsCount)

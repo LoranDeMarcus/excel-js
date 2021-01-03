@@ -45,7 +45,7 @@ export class Table extends ExcelComponent {
             this.$dispatch(actions.applyStyle({
                 value,
                 ids: this.selection.selectedIds
-            }))
+            }));
         });
     }
 
@@ -53,6 +53,7 @@ export class Table extends ExcelComponent {
         this.selection.select($cell);
         this.$emit('table:select', $cell);
         const styles = $cell.getStyles(Object.keys(defaultStyles));
+        console.log('Styles to dispatch', styles);
         this.$dispatch(actions.changeStyles(styles));
     }
 
@@ -108,7 +109,6 @@ export class Table extends ExcelComponent {
     }
 
     onInput(event) {
-        // this.$emit('table:input', $(event.target));
         this.updateTextInStore($(event.target).text());
     }
 }

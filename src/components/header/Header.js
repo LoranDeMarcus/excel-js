@@ -1,4 +1,7 @@
+import { $ } from '@core/dom';
 import { ExcelComponent } from '@core/ExcelComponent';
+import { changeTableTitle } from '@/redux/actions';
+import { defaultTitle } from '@/constants';
 
 export class Header extends ExcelComponent {
     static className = 'excel__header';
@@ -6,13 +9,16 @@ export class Header extends ExcelComponent {
     constructor($root, options) {
         super($root, {
             name: 'Header',
-            ...options
+            ...options,
+            listeners: ['input'],
+            subscribe: ['tableTitle']
         });
     }
 
     toHTML() {
+        const { tableTitle } = this.store.getState() || defaultTitle;
         return `
-      <input type="text" class="input" value="Новая таблица" />
+      <input type="text" class="input" value="${tableTitle}" />
 
       <div>
 
@@ -26,5 +32,9 @@ export class Header extends ExcelComponent {
 
       </div>
     `;
+    }
+
+    onInput(e) {
+        this.$dispatch(changeTableTitle($(e.target).text()));
     }
 }

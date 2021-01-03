@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/toolbar/toolbar.template.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/ExcelStateComponent.js" afterDir="false" />
+    <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="added cells styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/TableSelection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/TableSelection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/table/table.helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/table.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.template.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/toolbar/Toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toolbar/Toolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/DOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOM.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/Emitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Emitter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ExcelComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ExcelComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ExcelStateComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ExcelStateComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/StoreSubscriber.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/StoreSubscriber.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/createStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/createStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/initialState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/initialState.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/toolbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/toolbar.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1iV9m1o0Rv9Hbp5tWDo9oI36u5K" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -114,7 +116,8 @@
       <workItem from="1608873738223" duration="17361000" />
       <workItem from="1609397975226" duration="15266000" />
       <workItem from="1609570609202" duration="14000" />
-      <workItem from="1609570661078" duration="11253000" />
+      <workItem from="1609570661078" duration="14036000" />
+      <workItem from="1609662269290" duration="3672000" />
     </task>
     <task id="LOCAL-00001" summary="added init/remove event listeners">
       <created>1603031254442</created>
@@ -291,11 +294,28 @@
       <option name="project" value="LOCAL" />
       <updated>1609421752320</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added cells styling">
+      <created>1609583472158</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1609583472158</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -310,7 +330,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added init/remove event listeners" />
     <MESSAGE value="added new gitignore folder" />
     <MESSAGE value="added row and cols" />
     <MESSAGE value="Merge branch 'framework-start'&#10;&#10;# Conflicts:&#10;#&#9;.gitignore" />
@@ -335,6 +354,7 @@
     <MESSAGE value="added localstorage get/set" />
     <MESSAGE value="refactored width saver and render" />
     <MESSAGE value="refactored. added subscriber to text" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored. added subscriber to text" />
+    <MESSAGE value="added cells styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="added cells styling" />
   </component>
 </project>
