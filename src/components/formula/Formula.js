@@ -1,5 +1,5 @@
-import { $ } from '@core/DOM';
 import { ExcelComponent } from '@core/ExcelComponent';
+import { $ } from '@core/dom';
 
 export class Formula extends ExcelComponent {
     static className = 'excel__formula';
@@ -8,9 +8,16 @@ export class Formula extends ExcelComponent {
         super($root, {
             name: 'Formula',
             listeners: ['input', 'keydown'],
+            subscribe: ['currentText'],
             ...options
         });
+    }
 
+    toHTML() {
+        return `
+      <div class="info">fx</div>
+      <div id="formula" class="input" contenteditable spellcheck="false"></div>
+    `;
     }
 
     init() {
@@ -19,32 +26,23 @@ export class Formula extends ExcelComponent {
         this.$formula = this.$root.find('#formula');
 
         this.$on('table:select', $cell => {
-            this.$formula.text($cell.text());
-        });
-
-        this.$on('table:input', $cell => {
-            console.log(this.$formula);
-            this.$formula.text($cell.text());
+            this.$formula.text($cell.data.value);
         });
     }
 
-    toHTML() {
-        return `
-            <div class="info">fx</div>
-            <div id="formula" class="input" contenteditable spellcheck="false"></div>
-        `
+    storeChanged({ currentText }) {
+        this.$formula.text(currentText);
     }
 
-    onInput(e) {
-        this.$dispatch('formula:input', $(e.target).text());
+    onInput(event) {
+        this.$emit('formula:input', $(event.target).text());
     }
 
-    onKeydown(e) {
+    onKeydown(event) {
         const keys = ['Enter', 'Tab'];
-        if (keys.includes(e.key)) {
-            e.preventDefault();
-            this.$dispatch('formula:focus');
+        if (keys.includes(event.key)) {
+            event.preventDefault();
+            this.$emit('formula:done');
         }
-
     }
 }

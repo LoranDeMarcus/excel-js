@@ -1,4 +1,4 @@
-class DOM {
+class Dom {
     constructor(selector) {
         this.$el = typeof selector === 'string'
             ? document.querySelector(selector)
@@ -13,9 +13,9 @@ class DOM {
         return this.$el.outerHTML.trim();
     }
 
-    text(string) {
-        if (typeof string === 'string') {
-            this.$el.textContent = string;
+    text(text) {
+        if (typeof text !== 'undefined') {
+            this.$el.textContent = text;
             return this;
         }
         if (this.$el.tagName.toLowerCase() === 'input') {
@@ -24,8 +24,25 @@ class DOM {
         return this.$el.textContent.trim();
     }
 
+    clear() {
+        this.html('');
+        return this;
+    }
+
+    on(eventType, callback) {
+        this.$el.addEventListener(eventType, callback);
+    }
+
+    off(eventType, callback) {
+        this.$el.removeEventListener(eventType, callback);
+    }
+
+    find(selector) {
+        return $(this.$el.querySelector(selector));
+    }
+
     append(node) {
-        if (node instanceof DOM) {
+        if (node instanceof Dom) {
             node = node.$el;
         }
 
@@ -38,33 +55,52 @@ class DOM {
         return this;
     }
 
-    closest(selector) {
-        return $(this.$el.closest(selector));
-    }
-
-    getCord() {
-        return this.$el.getBoundingClientRect();
-    }
-
     get data() {
         return this.$el.dataset;
     }
 
-    on(eventType, callback) {
-        this.$el.addEventListener(eventType, callback);
+    closest(selector) {
+        return $(this.$el.closest(selector));
     }
 
-    off(eventType, callback) {
-        this.$el.removeEventListener(eventType, callback);
+    getCoords() {
+        return this.$el.getBoundingClientRect();
+    }
+
+    findAll(selector) {
+        return this.$el.querySelectorAll(selector);
+    }
+
+    attr(name, value) {
+        if (value) {
+            this.$el.setAttribute(name, value);
+            return this;
+        }
+        return this.$el.getAttribute(name);
+    }
+
+    css(styles = {}) {
+        Object
+            .keys(styles)
+            .forEach(key => {
+                this.$el.style[key] = styles[key];
+            });
+    }
+
+    getStyles(styles = []) {
+        return styles.reduce((res, s) => {
+            res[s] = this.$el.style[s];
+            return res;
+        }, {});
     }
 
     id(parse) {
         if (parse) {
             const parsed = this.id().split(':');
             return {
-                row: Number.parseInt(parsed[0]),
-                col: Number.parseInt(parsed[1])
-            }
+                row: +parsed[0],
+                col: +parsed[1]
+            };
         }
         return this.data.id;
     }
@@ -72,22 +108,6 @@ class DOM {
     focus() {
         this.$el.focus();
         return this;
-    }
-
-    find(selector) {
-        return $(this.$el.querySelector(selector));
-    }
-
-    findAll(selector) {
-        return this.$el.querySelectorAll(selector);
-    }
-
-    css(styles = {}) {
-        Object
-            .keys(styles)
-            .forEach(key => {
-            this.$el.style[key] = styles[key];
-        });
     }
 
     addClass(className) {
@@ -99,23 +119,16 @@ class DOM {
         this.$el.classList.remove(className);
         return this;
     }
-
-    clear() {
-        this.html('');
-        return this;
-    }
 }
 
 export function $(selector) {
-    return new DOM(selector);
+    return new Dom(selector);
 }
 
 $.create = (tagName, classes = '') => {
     const el = document.createElement(tagName);
-
     if (classes) {
         el.classList.add(classes);
     }
-
     return $(el);
-}
+};
