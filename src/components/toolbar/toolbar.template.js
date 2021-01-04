@@ -1,62 +1,57 @@
 function toButton(button) {
-    const meta = `
-        data-value='${JSON.stringify(button.value)}'
-    `;
-
-    return `
-        <div
-        class="button ${button.active ? 'active' : ''}"
+  const meta = `
+    data-type="button"
+    data-value='${JSON.stringify(button.value)}'
+  `
+  return `
+    <div 
+      class="button ${button.active ? 'active' : ''}"
+      ${meta}
+    >
+      <i 
+        class="material-icons"
         ${meta}
-        >
-            <i class="material-icons">${button.icon}</i>
-        </div>
-    `;
+      >${button.icon}</i>
+    </div>
+  `
 }
 
-export function createToolbar(state) {
-    const button = [
-        {
-            icon: 'format_align_left',
-            active: state['textAlign'] === 'left',
-            value: { textAlign: 'left' }
-        },
-        {
-            icon: 'format_align_center',
-            active: state['textAlign'] === 'center',
-            value: { textAlign: 'center' }
-        },
-        {
-            icon: 'format_align_right',
-            active: state['textAlign'] === 'right',
-            value: { textAlign: 'right' }
-        },
-        {
-            icon: 'format_bold',
-            active: state['fontWeight'] === 'bold',
-            value: {
-                fontWeight: state['fontWeight'] === 'bold'
-                    ? 'normal'
-                    : 'bold'
-            }
-        },
-        {
-            icon: 'format_italic',
-            active: state['fontStyle'] === 'italic',
-            value: {
-                fontStyle: state['fontStyle' === 'italic']
-                    ? 'normal'
-                    : 'italic'
-            }
-        },
-        {
-            icon: 'format_underlined',
-            active: state['textDecoration'] === 'underline',
-            value: {
-                textDecoration: state['textDecoration'] === 'underline'
-                    ? 'none'
-                    : 'underline'
-            }
-        }
-    ];
-    return button.map(toButton).join('');
+export function createToolbar(s) {
+  const buttons = [
+    {
+      value: {textAlign: 'left'},
+      icon: 'format_align_left',
+      active: s['textAlign'] === 'left'
+    },
+    {
+      value: {textAlign: 'center'},
+      icon: 'format_align_justify',
+      active: s['textAlign'] === 'center'
+    },
+    {
+      value: {textAlign: 'right'},
+      icon: 'format_align_right',
+      active: s['textAlign'] === 'right'
+    },
+    {
+      value: {fontWeight: s['fontWeight'] === 'bold' ? 'normal' : 'bold'},
+      icon: 'format_bold',
+      active: s['fontWeight'] === 'bold'
+    },
+    {
+      value: {
+        textDecoration: s['textDecoration'] === 'underline'
+          ? 'none'
+          : 'underline'
+      },
+      icon: 'format_underlined',
+      active: s['textDecoration'] === 'underline'
+    },
+    {
+      value: {fontStyle: s['fontStyle'] === 'italic' ? 'normal' : 'italic'},
+      icon: 'format_italic',
+      active: s['fontStyle'] === 'italic'
+    }
+  ]
+  return buttons.map(toButton).join('')
 }

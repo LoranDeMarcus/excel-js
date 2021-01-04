@@ -1,11 +1,11 @@
 import { range } from '@core/utils';
 
-export function shouldResize(event) {
-    return event.target.dataset.resize;
+export function shouldResize(e) {
+    return e.target.dataset.resize;
 }
 
-export function isCell(event) {
-    return event.target.dataset.type === 'cell';
+export function isCell(e) {
+    return e.target.dataset.type === 'cell';
 }
 
 export function matrix($target, $current) {
@@ -20,7 +20,10 @@ export function matrix($target, $current) {
     }, []);
 }
 
-export function nextSelector(key, { col, row }) {
+export function nextSelector(key, {
+    col,
+    row
+}) {
     const MIN_VALUE = 0;
     switch (key) {
         case 'Enter':

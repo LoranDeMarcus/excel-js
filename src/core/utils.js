@@ -38,14 +38,23 @@ export function toInlineStyles(styles = {}) {
         .join(';');
 }
 
-export function debounce(fn, delay) {
+export function debounce(fn, wait) {
     let timeout;
     return function (...args) {
         const later = () => {
             clearTimeout(timeout);
-            fn.apply(this, ...args);
-        }
+            // eslint-disable-next-line
+            fn.apply(this, args);
+        };
         clearTimeout(timeout);
-        timeout = setTimeout(later, delay);
+        timeout = setTimeout(later, wait);
     };
+}
+
+export function clone(obj) {
+    return JSON.parse(JSON.stringify(obj));
+}
+
+export function preventDefault(e) {
+    e.preventDefault();
 }

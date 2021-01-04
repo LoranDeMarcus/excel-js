@@ -36,7 +36,6 @@ export class Table extends ExcelComponent {
             this.selection.current
                 .attr('data-value', value)
                 .text(parse(value));
-            this.selection.current.text(value);
             this.updateTextInStore(value);
         });
 
@@ -60,21 +59,21 @@ export class Table extends ExcelComponent {
         this.$dispatch(actions.changeStyles(styles));
     }
 
-    async resizeTable(event) {
+    async resizeTable(e) {
         try {
-            const data = await resizeHandler(this.$root, event);
+            const data = await resizeHandler(this.$root, e);
             this.$dispatch(actions.tableResize(data));
         } catch (e) {
             console.warn('Resize error', e.message);
         }
     }
 
-    onMousedown(event) {
-        if (shouldResize(event)) {
-            this.resizeTable(event);
-        } else if (isCell(event)) {
-            const $target = $(event.target);
-            if (event.shiftKey) {
+    onMousedown(e) {
+        if (shouldResize(e)) {
+            this.resizeTable(e);
+        } else if (isCell(e)) {
+            const $target = $(e.target);
+            if (e.shiftKey) {
                 const $cells = matrix($target, this.selection.current)
                     .map(id => this.$root.find(`[data-id="${id}"]`));
                 this.selection.selectGroup($cells);
@@ -84,7 +83,7 @@ export class Table extends ExcelComponent {
         }
     }
 
-    onKeydown(event) {
+    onKeydown(e) {
         const keys = [
             'Enter',
             'Tab',
@@ -94,10 +93,10 @@ export class Table extends ExcelComponent {
             'ArrowUp'
         ];
 
-        const { key } = event;
+        const { key } = e;
 
-        if (keys.includes(key) && !event.shiftKey) {
-            event.preventDefault();
+        if (keys.includes(key) && !e.shiftKey) {
+            e.preDefault();
             const id = this.selection.current.id(true);
             const $next = this.$root.find(nextSelector(key, id));
             this.selectCell($next);
@@ -111,7 +110,7 @@ export class Table extends ExcelComponent {
         }));
     }
 
-    onInput(event) {
-        this.updateTextInStore($(event.target).text());
+    onInput(e) {
+        this.updateTextInStore($(e.target).text());
     }
 }

@@ -13,6 +13,11 @@ class Dom {
         return this.$el.outerHTML.trim();
     }
 
+    clear() {
+        this.html('');
+        return this;
+    }
+
     text(text) {
         if (typeof text !== 'undefined') {
             this.$el.textContent = text;
@@ -22,11 +27,6 @@ class Dom {
             return this.$el.value.trim();
         }
         return this.$el.textContent.trim();
-    }
-
-    clear() {
-        this.html('');
-        return this;
     }
 
     on(eventType, callback) {
@@ -71,14 +71,6 @@ class Dom {
         return this.$el.querySelectorAll(selector);
     }
 
-    attr(name, value) {
-        if (value) {
-            this.$el.setAttribute(name, value);
-            return this;
-        }
-        return this.$el.getAttribute(name);
-    }
-
     css(styles = {}) {
         Object
             .keys(styles)
@@ -108,6 +100,14 @@ class Dom {
     focus() {
         this.$el.focus();
         return this;
+    }
+
+    attr(name, value) {
+        if (value) {
+            this.$el.setAttribute(name, value);
+            return this;
+        }
+        return this.$el.getAttribute(name);
     }
 
     addClass(className) {
