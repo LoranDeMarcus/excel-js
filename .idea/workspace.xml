@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/core/parse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/Page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/routes/ActiveRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/routes/Router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/DashboardPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ExcelPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dashboard.functions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/excel/Excel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/excel/Excel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/formula/Formula.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formula/Formula.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/table/TableSelection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/TableSelection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/table/table.helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/table/table.resize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.resize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/table/table.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/toolbar/Toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toolbar/Toolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/toolbar/toolbar.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toolbar/toolbar.template.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/DOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOM.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/DOMListener.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOMListener.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/Emitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Emitter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ExcelComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ExcelComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ExcelStateComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ExcelStateComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/StoreSubscriber.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/StoreSubscriber.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/createStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/createStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/parse.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/initialState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/initialState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/toolbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/toolbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +58,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1iV9m1o0Rv9Hbp5tWDo9oI36u5K" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -110,6 +146,7 @@
       <workItem from="1609570661078" duration="14036000" />
       <workItem from="1609662269290" duration="3976000" />
       <workItem from="1609680486103" duration="3677000" />
+      <workItem from="1609746551790" duration="9855000" />
     </task>
     <task id="LOCAL-00001" summary="added init/remove event listeners">
       <created>1603031254442</created>

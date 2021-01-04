@@ -19,13 +19,12 @@ export class ExcelComponent extends DomListener {
         return '';
     }
 
-    $emit(event, ...args) {
-        this.emitter.emit(event, ...args);
+    $emit(e, ...args) {
+        this.emitter.emit(e, ...args);
     }
 
-    // Подписываемся на событие event
-    $on(event, fn) {
-        const unsub = this.emitter.subscribe(event, fn);
+    $on(e, fn) {
+        const unsub = this.emitter.subscribe(e, fn);
         this.unsubscribers.push(unsub);
     }
 
