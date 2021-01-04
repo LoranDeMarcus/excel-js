@@ -5,40 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca74a37-30c4-411d-8506-5d9007d9f823" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/core/Page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/routes/ActiveRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/routes/Router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/DashboardPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ExcelPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dashboard.functions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/store/createStore.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/excel-js.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/excel-js.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/excel/Excel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/excel/Excel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/formula/Formula.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formula/Formula.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table/TableSelection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/TableSelection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table/table.helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table/table.resize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.resize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table/table.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/table.template.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/toolbar/Toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toolbar/Toolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/toolbar/toolbar.template.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toolbar/toolbar.template.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/DOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/DOMListener.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/DOMListener.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/Emitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/Emitter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ExcelComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ExcelComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ExcelStateComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ExcelStateComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/StoreSubscriber.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/StoreSubscriber.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/createStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/createStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/parse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/initialState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/initialState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/toolbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/toolbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/createStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/store/createStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ExcelPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ExcelPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +25,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="unit-testing" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,6 +39,11 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="ProjectId" id="1iV9m1o0Rv9Hbp5tWDo9oI36u5K" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -84,8 +62,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\Excel-JS\src\core\store" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.start">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -110,6 +93,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
       </list>
@@ -366,7 +351,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added row and cols" />
     <MESSAGE value="Merge branch 'framework-start'&#10;&#10;# Conflicts:&#10;#&#9;.gitignore" />
     <MESSAGE value="added resize styles" />
     <MESSAGE value="trying resize col width" />
@@ -391,6 +375,11 @@
     <MESSAGE value="refactored. added subscriber to text" />
     <MESSAGE value="added cells styling" />
     <MESSAGE value="finished title" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished title" />
+    <MESSAGE value="finished routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished routing" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

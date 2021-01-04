@@ -8,5 +8,3 @@ new Router('#app', {
     dashboard: DashboardPage,
     excel: ExcelPage
 });
-
-// next lesson: https://vladilen.ru/pl/teach/control/lesson/view?id=161601852
